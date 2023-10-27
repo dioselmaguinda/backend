@@ -21,7 +21,15 @@ class CarouselItemsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+         
+        $carouselItem = CarouselItems::create([
+            'carousel_name' =>$request ->carousel_name,
+            'image_path'    =>$request ->image_path,
+            'description'   =>$request ->description,
+            'user_id'       =>$request ->user_id,
+        ]);
+
+
     }
 
     /**
